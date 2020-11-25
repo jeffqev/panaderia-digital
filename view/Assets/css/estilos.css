@@ -1,0 +1,325 @@
+
+/* DASHBORD */
+*{            
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #f2f2f2;
+    font-size: 20px;
+    font-family: 'Roboto',sans-serif;
+}
+
+.barra-lateral{
+    background: #2F4050;
+    color: #fff;
+    min-width: 230px;
+    min-height: 100vh;
+    padding: 0;
+    
+    height: 46px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+.barra-lateral::-webkit-scrollbar{
+    width: 6px;
+}
+
+
+
+.barra-lateral .logo a span{
+    display: none;    
+}
+
+.barra-lateral a {
+    color: white;
+}
+
+.barra-lateral .logo{
+    background: #293846;
+    /* height: 155px; */
+    margin-bottom: 2px;
+}
+
+.barra-lateral .logo h2{
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+}
+
+.barra-lateral .menu a{
+    display: block;
+    padding: 13px 19px 13px 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #a7b1c2;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    transition: 0.4s ease;
+}
+
+.barra-lateral .menu a:hover{
+    background: #233645;
+    text-decoration: none;
+    color: white;    
+}
+
+.barra-lateral .menu a i{
+    margin-right: 5px;
+    font-weight: normal;    
+}
+
+.barra-lateral .logo a i {
+    display: none;
+}
+.barra-lateral .menu ul li  ul  {
+        list-style: none;
+        padding: 0;
+        margin-left: 15px;
+    }
+
+@media screen and (max-width: 900px){
+    .barra-lateral{
+        min-width: auto;
+    }
+    
+    .barra-lateral .logo h2{
+        display: none;
+    }
+
+    .barra-lateral .menu a {
+        font-size: 18px;
+    }
+    .barra-lateral .menu a span{
+        display: none;
+    }
+    .barra-lateral .menu a i{
+        margin: 0;
+        
+    }
+    .barra-lateral .logo a {
+        text-decoration: none;
+    }
+    .barra-lateral .logo a span{
+        margin-right: 5px;
+        display: block;                
+        padding: 13px 19px 13px 24px;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .barra-lateral{
+        min-height: auto;
+    }
+    .barra-lateral .menu ul{
+        padding: 0;
+    }    
+    .barra-lateral .menu ul li a  {
+        display: block;                              
+        border-bottom: none;
+    }
+    .barra-lateral .menu ul li  ul  {
+        list-style: none;
+    }
+    .barra-lateral .menu ul li  ul li  {
+        margin-left: 15px; 
+    }
+    
+    .barra-lateral .logo a span{
+        display: none; 
+    }
+    .barra-lateral .logo a i {                
+        display: flex;
+        justify-content: flex-end;
+        padding: 13px 19px 13px 24px;               
+        color: #a7b1c2;            
+    }
+
+
+    
+    .fondo-enlace{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top:0;
+        left: 0;
+        cursor: pointer;
+        background: rgba(0,0,0,.5);
+        z-index: 99;
+        display: none;
+        
+    }
+        .activo{
+        display: block;
+    }
+
+    .barra-lateral .menu{
+        display: inline-block;
+        width: 50%;
+        position: fixed;
+        background: rgba(0,0,0,.85);
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding: 0;
+        margin: 0;
+
+        width: 90%;
+        height: 100%;
+
+        transform: translatey(-100%);
+        transition: all .3 ease;
+        
+    }
+    .barra-lateral .menu-activo{
+        transform: translateX(0%);
+    }
+    .barra-lateral .menu a span{
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+
+    }   
+
+}
+
+/* CONTENIDO */
+.contenido{
+
+     min-height: 100vh;
+     height: 0px;
+     overflow: hidden;
+     overflow-y: scroll;
+}
+
+/*Sroll personalizado*/
+.contenido::-webkit-scrollbar{
+    width: 6px;
+}
+
+.contenido::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+
+
+.navegacion{
+    margin-top: 7px;
+    
+}
+
+.navegacion a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #999C9E;
+    text-decoration: none;
+}
+
+.navegacion div{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #999C9E;
+}
+.btn-menu i{
+    color: #a7b1c2;
+    transition: 0.4s ease;
+}
+.btn-menu i:hover{
+    color: white;
+}
+
+.titulo{
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    background: white;
+}
+.main {
+    padding: 0;
+}
+.main .contenido .col-12 {
+    padding: 0;
+    
+}
+.main .contenido .col-12 .titulo{
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+.main .contenido .col-12 .titulo p{
+
+    margin-left: 30px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #999C9E;
+}
+
+
+.main .contenido .ingresos,
+.main .contenido .ver{
+    padding: 15px;
+    margin: 10px;   
+    border: 1px solid rgba(0,0,0,.2); 
+    border-radius: 10px;
+    background: white;
+    width: 100%;
+    height: 500px;    
+}
+
+.main .contenido .ver .tabla{
+    border-radius: 15px;
+    width: 100%;
+     height: 400px; 
+    overflow: hidden;
+    overflow-y: scroll;  
+
+}
+/*Sroll personalizado*/
+.main .contenido .ver .tabla::-webkit-scrollbar{
+    width: 6px;
+}
+
+
+
+
+.main .contenido .ver p,
+.main .contenido .ingresos p{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #999C9E;
+}
+
+table{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #999C9E;
+}
+
+button{
+    cursor: pointer;
+}
+.d-flex .nav ul  {
+    display: none;
+    
+}
+
+.letra{
+    
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    color: #999C9E;
+    margin-top: 15px;
+
+
+}
